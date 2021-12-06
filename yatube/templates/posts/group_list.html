@@ -16,9 +16,9 @@
             </li>
           </ul>
           <p>{{ post.text }}</p>
-          <a href="{% url 'posts:posts_list' %}">все записи группы</a>
           {% if not forloop.last %}<hr>{% endif %}
           {% endfor %}
+          <a>все записи группы</a>
         </article>
         <!-- под последним постом нет линии -->
       </div>
