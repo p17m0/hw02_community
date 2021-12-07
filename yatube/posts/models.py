@@ -1,4 +1,5 @@
 from django.db import models
+
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -26,5 +27,8 @@ class Post(models.Model):
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
-        related_name='groups'
+        related_name='posts'
     )
+
+    class Meta:
+        order = ['-pub_date']
