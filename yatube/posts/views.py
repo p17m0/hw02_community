@@ -4,7 +4,7 @@ from .models import Group, Post
 
 
 def index(request):
-    posts = Post.posts.all()[:10]
+    posts = Post.objects.all()[:10]
     context = {
         'posts': posts,
     }
